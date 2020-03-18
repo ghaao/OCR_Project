@@ -25,13 +25,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="608f39d9-af51-4b36-b388-ebab7848b368">
-        <schema name="main" object-types="view, table" />
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="608f39d9-af51-4b36-b388-ebab7848b368">
-      <console name="localhost" type="STANDARD" schema="main" session="Main" />
+      <console name="localhost" type="STANDARD" schema="main" session="Main">SELECT * FROM ocr_app_ocrinstance;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -41,11 +41,25 @@
     <connection id="608f39d9-af51-4b36-b388-ebab7848b368" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_photo" active-filter-id="" />
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_img_file_info" active-filter-id="EMPTY_FILTER">
+      <filter id="129929f9-fcb7-4ad6-9262-fa1318cc35d5" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_ocr_result_log" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_ocr_request_log" active-filter-id="EMPTY_FILTER">
+      <filter id="9fb801e7-34d9-4271-a2e6-61f25db2059f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.auth_group" active-filter-id="" />
     <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_ocrinstance" active-filter-id="EMPTY_FILTER">
       <filter id="863ae560-1803-43ce-88bd-1407877399e3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_spoiler_log" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -85,7 +99,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="C:\Users\Administrator\ImageProcessing\db.sqlite3" schema="main" />
+            <file path="D:\ImageProcessing\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

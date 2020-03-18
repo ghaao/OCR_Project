@@ -1,27 +1,14 @@
-from django.conf.urls import url, include
-from django.conf.urls.static import static
-from rest_framework import routers
-
-from config import settings
-from ocr_app import views
+from django.conf.urls import url
 from django.urls import path
-from rest_framework.urlpatterns import format_suffix_patterns
+
+from ocr_app import views
 
 urlpatterns = [
-    path('tesseract/', views.ocr_list),
-    path('tesseract/<int:pk>', views.ocr_list_detail),
+    path('extract/', views.spoiler_extract),
+    path('extract/<int:pk>', views.spoiler_extract_list),
+
+    url(r'^clear/$', views.clear_database, name='clear_database'),
+    url(r'^basic-upload/$', views.BasicUploadView.as_view(), name='basic_upload'),
+    url(r'^progress-bar-upload/$', views.ProgressBarUploadView.as_view(), name='progress_bar_upload'),
+    url(r'^drag-and-drop-upload/$', views.DragAndDropUploadView.as_view(), name='drag_and_drop_upload'),
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
-
-"""
-REST Framework에서는 URL에 따라 다른 로직이 실행될 수 있도록 자동으로 라우팅하는 기능을 제공합니다.
-Router에서는 사용자의 요청을 확인하고 어디에서 이 요청이 처리되어야 하는지 알려줍니다.
-"""
-# router = routers.DefaultRouter()
-# router.register(r'tesseract', views.OCRViewSet)
-#
-# urlpatterns = [
-#     url(r'^', include(router.urls)),
-#     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

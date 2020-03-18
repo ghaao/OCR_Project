@@ -26,11 +26,10 @@ SECRET_KEY = '(8pdx5!r5ai4jou^13l%4chdc-q%-t&&*-6+&6)h+4p^18(twt'
 DEBUG = True
 
 #docker 에서 실행 시 host 인증
-#ALLOWED_HOSTS = ['web']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web', '127.0.0.1']
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'ocr_app.apps.OcrAppConfig',
+    'rangefilter',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,24 +105,26 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Asia/Seoul'
-
 USE_I18N = True
-
 USE_L10N = True
-
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, 'static'),
+)
+# python manage.py collectstatic --no-input 진행 시 Static 파일이 모이는 위치.
+# nginx가 STATIC_URL로 정적 파일 요청을 받으면 해당 static 위치에서 지원. - 속도를 위해
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
+# 각 media 파일에 대한 URL Prefix
 MEDIA_URL = '/media/'
+# 업로드된 파일을 저장할 디렉토리 경로
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 REST_FRAMEWORK = {

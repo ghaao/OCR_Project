@@ -1,24 +1,31 @@
-from django.db import models
-from django.utils import timezone
 import logging
+
+from django.db import models
+
 logger = logging.getLogger('django_info')
 
-class OCRInstance(models.Model):
-    CLOFFER_ID   = models.IntegerField(null=False)
-    REQT_DTTM    = models.DateTimeField()
-    MSG_CTNT     = models.CharField(max_length=4000, null=True)
-    CHG_DTTM     = models.DateTimeField()
-    REG_DTTM     = models.DateTimeField()
-    RSTR_USER_NO = models.CharField(max_length=10)
-    REG_DEPT_CD  = models.CharField(max_length=10)
+# Test Photo 
+class Photo(models.Model):
+    title = models.CharField(max_length=255, blank=True)
+    file = models.FileField(upload_to='photos/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
-    def save(self, *args, **kwargs):
-        # Time configuration
-        self.REQT_DTTM = timezone.localtime()
-        self.CHG_DTTM  = timezone.localtime()
-        self.REG_DTTM  = timezone.localtime()
-        self.MSG_CTNT  = 'Request - CLOFFER_ID(' + str(self.CLOFFER_ID) + '), RSTR_USER_NO(' + self.RSTR_USER_NO + ')'
+# OCR Request 로그 저장
+class SPOILER_LOG(models.Model):
+    CLOFFER_ID    = models.IntegerField(null=False)
+    REQT_DTTM     = models.CharField(max_length=14)
+    DOC_TYP_CD    = models.CharField(max_length=2, null=False)
+    REQTR_USER_NO = models.CharField(max_length=10, null=False)
+    PRC_DTTM      = models.DateTimeField(null=True)
+    PRC_FLG       = models.CharField(max_length=1, default='N')
+    MSG_CTNT      = models.TextField(null=True)
+    REG_DTTM      = models.DateTimeField(auto_now_add=True)
+    RSTR_USER_NO  = models.CharField(max_length=10, null=False)
+    REG_DEPT_CD   = models.CharField(max_length=10, null=False)
+    REG_SYS_CD    = models.CharField(max_length=2, null=False)
+    REG_PGM_NM    = models.CharField(max_length=100, null=False)
 
-        # Request 로그 저장 및 파일 기록
-        super().save(*args, **kwargs)
-        logger.info(self.MSG_CTNT)
+    # def save(self, *args, **kwargs):
+    #     self.MSG_CTNT  = 'Receive request - CLOFFER_ID(' + str(self.CLOFFER_ID) + '), RSTR_USER_NO(' + self.RSTR_USER_NO + ')'
+    #
+    #     super().save(*args, **kwargs)

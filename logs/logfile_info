@@ -1,225 +1,114 @@
-[28/Jan/2020 10:39:55] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124444
-[28/Jan/2020 10:39:55] INFO [django_info:24] Request - CLOFFER_ID(123124444), RSTR_USER_NO(12312443)
-[28/Jan/2020 10:39:55] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 10:39:56] INFO [django_info:23] OCR Start - 123124444
-[28/Jan/2020 10:39:56] INFO [django_info:25] OCR Exit - 123124444
-[28/Jan/2020 10:40:45] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124444
-[28/Jan/2020 10:40:45] INFO [django_info:24] Request - CLOFFER_ID(123124444), RSTR_USER_NO(12312443)
-[28/Jan/2020 10:40:45] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 10:40:45] INFO [django_info:23] OCR Start - 123124444
-[28/Jan/2020 10:40:45] INFO [django_info:25] OCR Exit - 123124444
-[28/Jan/2020 10:42:20] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124445
-[28/Jan/2020 10:42:20] INFO [django_info:24] Request - CLOFFER_ID(123124445), RSTR_USER_NO(12312443)
-[28/Jan/2020 10:42:20] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 10:42:20] INFO [django_info:23] OCR Start - 123124445
-[28/Jan/2020 10:42:20] INFO [django_info:25] OCR Exit - 123124445
-[28/Jan/2020 10:44:25] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124445
-[28/Jan/2020 10:44:25] INFO [django_info:24] Request - CLOFFER_ID(123124445), RSTR_USER_NO(12312443)
-[28/Jan/2020 10:44:25] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 10:44:25] INFO [django_info:23] OCR Start - 123124445
-[28/Jan/2020 10:44:25] INFO [django_info:25] OCR Exit - 123124445
-[28/Jan/2020 10:51:10] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124446
-[28/Jan/2020 10:51:10] INFO [django_info:24] Request - CLOFFER_ID(123124446), RSTR_USER_NO(12312443)
-[28/Jan/2020 10:51:10] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 10:51:10] INFO [django_info:23] OCR Start - 123124446
-[28/Jan/2020 10:51:10] INFO [django_info:25] OCR Exit - 123124446
-[28/Jan/2020 13:19:34] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124446
-[28/Jan/2020 13:19:34] INFO [django_info:24] Request - CLOFFER_ID(123124446), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:19:34] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:19:34] INFO [django_info:23] OCR Start - 123124446
-[28/Jan/2020 13:19:34] INFO [django_info:25] OCR Exit - 123124446
-[28/Jan/2020 13:21:30] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:21:30] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:21:30] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:21:30] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:21:30] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:24:03] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:24:03] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:24:03] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:24:03] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:24:03] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:25:10] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:25:10] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:25:10] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:25:10] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:25:10] INFO [django_info:45] /code\\resource\\ocr_result_txt
-[28/Jan/2020 13:25:10] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:26:48] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:26:48] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:26:48] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:26:49] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:26:49] INFO [django_info:45] /code/\\resource\\ocr_result_txt
-[28/Jan/2020 13:26:49] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:28:32] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:28:32] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:28:32] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:28:32] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:28:32] INFO [django_info:45] /code/\\resource\\ocr_result_txt
-[28/Jan/2020 13:28:32] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:30:18] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:30:18] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:30:18] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:30:18] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:30:18] INFO [django_info:45] /code//resource//ocr_result_txt
-[28/Jan/2020 13:31:11] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:31:11] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:31:11] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:31:11] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:31:11] INFO [django_info:45] /code/resource/ocr_result_txt
-[28/Jan/2020 13:33:00] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:33:00] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:33:00] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:33:00] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:33:00] INFO [django_info:45] /code\\resource\\ocr_result_txt
-[28/Jan/2020 13:33:00] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:40:04] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:40:04] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:40:04] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:40:04] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:40:04] INFO [django_info:45] \\resource\\ocr_result_txt
-[28/Jan/2020 13:43:06] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:43:06] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:43:06] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:43:06] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:43:06] INFO [django_info:45] \resource\ocr_result_txt
-[28/Jan/2020 13:43:06] INFO [django_info:48] D1
-[28/Jan/2020 13:43:56] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:43:56] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:43:56] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:43:56] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:43:56] INFO [django_info:45] \\resource\\ocr_result_txt
-[28/Jan/2020 13:43:56] INFO [django_info:48] D1
-[28/Jan/2020 13:44:40] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:44:40] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:44:40] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:44:40] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:44:40] INFO [django_info:45] \\resource\\ocr_result_txt
-[28/Jan/2020 13:45:24] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:45:24] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:45:24] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:45:24] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:45:24] INFO [django_info:45] /code\\resource\\ocr_result_txt
-[28/Jan/2020 13:45:24] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:53:53] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:53:53] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:53:53] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:53:53] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:53:53] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 13:53:53] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:56:57] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:56:57] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:56:57] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:56:57] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:56:57] INFO [django_info:45] C:\Users\Administrator\ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 13:56:57] INFO [django_info:48] 1111
-[28/Jan/2020 13:57:04] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 13:58:02] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 13:58:03] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 13:58:03] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 13:58:03] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 13:58:03] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 13:58:03] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 14:35:12] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 14:35:12] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 14:35:12] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 14:35:12] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 14:35:12] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 14:35:12] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:37:03] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124446
-[28/Jan/2020 15:37:03] INFO [django_info:24] Request - CLOFFER_ID(123124446), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:37:03] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:37:03] INFO [django_info:23] OCR Start - 123124446
-[28/Jan/2020 15:37:03] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:37:03] INFO [django_info:25] OCR Exit - 123124446
-[28/Jan/2020 15:44:01] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:44:01] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:44:01] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:44:01] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:44:01] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:44:01] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:49:37] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:49:37] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:49:37] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:49:37] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:49:37] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:49:37] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:50:55] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:50:55] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:50:55] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:50:55] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:50:55] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:50:55] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:51:40] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:51:40] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:51:40] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:51:40] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:51:40] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:51:40] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:52:09] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:52:09] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:52:09] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:52:09] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:52:09] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:52:09] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:52:41] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:52:41] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:52:41] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:52:41] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:52:41] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:52:41] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:54:25] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:54:25] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:54:25] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:54:25] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:54:25] INFO [django_info:48] C:\Users\Administrator\resource/orc_ori_image
-[28/Jan/2020 15:54:25] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:54:57] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:54:57] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:54:57] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:54:57] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:54:57] INFO [django_info:48] C:\Users\Administrator\resource\orc_ori_image
-[28/Jan/2020 15:54:57] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:56:01] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:56:01] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:56:01] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:56:01] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:56:01] INFO [django_info:48] C:\Users\Administrator\ImageProcessing
-[28/Jan/2020 15:56:01] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:56:40] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:56:40] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:56:40] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:56:40] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:56:40] INFO [django_info:48] C:\Users\Administrator\ImageProcessingesource\orc_ori_image
-[28/Jan/2020 15:56:40] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:57:20] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:57:20] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:57:20] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:57:20] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:57:20] INFO [django_info:48] C:\Users\Administrator\ImageProcessing/resource/orc_ori_image
-[28/Jan/2020 15:57:20] INFO [django_info:51] 1111
-[28/Jan/2020 15:57:20] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:58:21] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:58:21] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:58:21] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:58:21] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:58:21] INFO [django_info:48] C:\Users\Administrator\ImageProcessing/resource/orc_ori_image
-[28/Jan/2020 15:58:21] INFO [django_info:51] 1111
-[28/Jan/2020 15:58:21] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:58:49] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:58:49] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:58:49] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:58:49] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:58:49] INFO [django_info:48] C:\Users\Administrator\ImageProcessing/resource/orc_ori_image
-[28/Jan/2020 15:58:49] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 15:59:28] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 15:59:28] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 15:59:28] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 15:59:28] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 15:59:28] INFO [django_info:45] C:\Users\Administrator\ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 15:59:33] INFO [django_info:25] OCR Exit - 123124447
-[28/Jan/2020 16:31:59] INFO [django_info:38] HttpResponse - RECEIVE CLOFFER_ID 123124447
-[28/Jan/2020 16:31:59] INFO [django_info:24] Request - CLOFFER_ID(123124447), RSTR_USER_NO(12312443)
-[28/Jan/2020 16:31:59] INFO [django_info:20] HttpResponse - successful(200)
-[28/Jan/2020 16:31:59] INFO [django_info:23] OCR Start - 123124447
-[28/Jan/2020 16:31:59] INFO [django_info:45] /ImageProcessing\\resource\\ocr_result_txt
-[28/Jan/2020 16:31:59] INFO [django_info:25] OCR Exit - 123124447
+[18/Mar/2020 10:43:17] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[0] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:43:17] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:43:17] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:43:17] INFO [django_info:101] 12345678 - ì²˜ë¦¬ëœ íŒŒì¼ì´ 0ê°œì¸ ì˜¤ë¥˜
+[18/Mar/2020 10:43:17] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '0', 'ERR_CD': '19'}
+[18/Mar/2020 10:43:17] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:43:17] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:43:57] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:43:57] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:43:57] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:43:58] INFO [django_info:33] Extract FileName ->>> : /ImageProcessing/ocr_app\\resource\\orc_ori_image/123456780120200316111401.JPG
+[18/Mar/2020 10:43:58] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:43:58] INFO [django_info:101] 12345678 - ì²˜ë¦¬ëœ íŒŒì¼ì´ 0ê°œì¸ ì˜¤ë¥˜
+[18/Mar/2020 10:43:58] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 10:43:58] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:43:58] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:46:45] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:46:45] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:46:45] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:46:48] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 10:46:48] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:46:48] INFO [django_info:101] 12345678 - Ã³¸®µÈ ÆÄÀÏÀÌ 0°³ÀÎ ¿À·ù
+[18/Mar/2020 10:46:49] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 10:46:49] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:46:49] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:48:47] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:48:47] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:48:47] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:48:50] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 10:48:50] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:48:50] INFO [django_info:101] 12345678 - Ã³¸®µÈ ÆÄÀÏÀÌ 0°³ÀÎ ¿À·ù
+[18/Mar/2020 10:48:51] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 10:48:51] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:48:51] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:49:39] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:49:40] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:49:40] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:49:42] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 10:49:42] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:49:42] INFO [django_info:101] 12345678 - Ã³¸®µÈ ÆÄÀÏÀÌ 0°³ÀÎ ¿À·ù
+[18/Mar/2020 10:49:42] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 10:49:42] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:49:42] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:51:32] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:51:33] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:51:33] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:51:34] INFO [django_info:33] Extract FileName ->>> : /ImageProcessing/ocr_app\\resource\\orc_ori_image/123456780120200316111401.JPG
+[18/Mar/2020 10:51:34] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:51:34] INFO [django_info:101] 12345678 - ì²˜ë¦¬ëœ íŒŒì¼ì´ 0ê°œì¸ ì˜¤ë¥˜
+[18/Mar/2020 10:51:34] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 10:51:34] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:51:34] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:53:47] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:53:47] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:53:47] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:53:50] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 10:53:50] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:53:51] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 10:53:51] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:53:51] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 10:55:15] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 10:55:15] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 10:55:15] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 10:55:16] INFO [django_info:33] Extract FileName ->>> : /ImageProcessing/ocr_app\\resource\\orc_ori_image/123456780120200316111401.JPG
+[18/Mar/2020 10:55:16] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 10:55:17] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 10:55:17] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 10:55:17] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:02:07] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 11:02:07] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:02:07] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:02:10] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 11:02:11] INFO [django_info:42] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 11:02:11] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 11:02:11] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:02:11] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:20:04] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 11:20:04] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:20:04] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:20:04] INFO [django_info:107] 12345678 - Ã³¸®µÈ ÆÄÀÏÀÌ 0°³ÀÎ ¿À·ù
+[18/Mar/2020 11:20:05] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 11:20:05] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:20:05] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:20:25] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111402]
+[18/Mar/2020 11:20:25] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:20:25] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:20:26] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111402.JPG
+[18/Mar/2020 11:20:26] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 11:20:26] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:20:26] INFO [django_info:45] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 11:20:26] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:22:23] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 11:22:24] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:22:24] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:22:24] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111401.JPG
+[18/Mar/2020 11:22:25] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 11:22:25] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:22:25] INFO [django_info:48] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 11:22:25] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:22:34] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111401]
+[18/Mar/2020 11:22:34] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:22:34] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:22:34] INFO [django_info:107] 12345678 - Ã³¸®µÈ ÆÄÀÏÀÌ 0°³ÀÎ ¿À·ù
+[18/Mar/2020 11:22:35] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '19'}
+[18/Mar/2020 11:22:35] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:22:35] INFO [django_info:142] Spoiler Exit - 12345678
+[18/Mar/2020 11:34:41] INFO [django_info:97] HttpResponse RECEIVE > CLOFFER_ID-[12345678] / DOC_TYP_CD-[01] / PRC_DTTM-[20200316111402]
+[18/Mar/2020 11:34:42] INFO [django_info:137] HttpResponse - successful(200)
+[18/Mar/2020 11:34:42] INFO [django_info:140] Spoiler Start - 12345678
+[18/Mar/2020 11:34:42] INFO [django_info:33] Extract FileName ->>> : D:\ImageProcessing\ocr_app\\resource\\orc_ori_image\123456780120200316111402.JPG
+[18/Mar/2020 11:34:43] INFO [django_info:19] Success send RESTful API to BW - {'CLOFFER_ID': 12345678, 'DOC_TYP_CD': '01', 'ERR_CD': '00'}
+[18/Mar/2020 11:34:43] INFO [django_info:23] Success BW was received REST api request.
+[18/Mar/2020 11:34:43] INFO [django_info:48] 12345678 - OCR_RESULT._LOG instance is stored to sqllite.
+[18/Mar/2020 11:34:43] INFO [django_info:142] Spoiler Exit - 12345678

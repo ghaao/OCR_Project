@@ -1,16 +1,133 @@
-from ocr_app.models import OCRInstance
-from .serializers import OCRSerializer
+import logging
 
+from django.http import HttpResponse
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
+from django.views import View
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-import ocr_tesseract
-from django.http import HttpResponse
 
-import logging
+from ocr_app import ocr_tesseract, requestREST
+from ocr_app.models import SPOILER_LOG, Photo
+from .forms import PhotoForm
+from .serializers import OCRSerializer
+
 logger = logging.getLogger('django_info')
 
 clofferId = 0
+docTypCd = ''
+reqtDttm = '00000000000000'
+
+class BasicUploadView(View):
+    def get(self, request):
+        photos_list = Photo.objects.all()
+        return render(self.request, 'photos/basic_upload/index.html', {'photos': photos_list})
+
+    def post(self, request):
+        form = PhotoForm(self.request.POST, self.request.FILES)
+        if form.is_valid():
+            photo = form.save()
+            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
+
+            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+        else:
+            data = {'is_valid': False}
+        return JsonResponse(data)
+
+
+class ProgressBarUploadView(View):
+    def get(self, request):
+        photos_list = Photo.objects.all()
+
+        return render(self.request, 'photos/progress_bar_upload/index.html', {'photos': photos_list})
+
+    def post(self, request):
+        form = PhotoForm(self.request.POST, self.request.FILES)
+        if form.is_valid():
+            photo = form.save()
+            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
+            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+        else:
+            data = {'is_valid': False}
+
+        return JsonResponse(data)
+
+
+class DragAndDropUploadView(View):
+    def get(self, request):
+        photos_list = Photo.objects.all()
+        return render(self.request, 'photos/drag_and_drop_upload/index.html', {'photos': photos_list})
+
+    def post(self, request):
+        form = PhotoForm(self.request.POST, self.request.FILES)
+        if form.is_valid():
+            photo = form.save()
+            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
+            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+        else:
+            data = {'is_valid': False}
+        return JsonResponse(data)
+
+
+def clear_database(request):
+    for photo in Photo.objects.all():
+        photo.file.delete()
+        photo.delete()
+    return redirect(request.POST.get('next'))
+
+
+
+@api_view(['GET', 'POST'])
+def spoiler_extract(request):
+    # POST로만 Requset를 받는다.
+    if request.method == 'GET':
+        serializer = OCRSerializer(data=request.data)
+        logger.info("HttpResponse(Get) - BAD REQUEST(400) " + str(request.data))
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'POST':
+        # Global 변수 설정 - Spoiler 작업 변경 처리를 위한 PK를 넘긴다.
+        global clofferId, docTypCd, reqtDttm
+
+        clofferId = int(request.data['CLOFFER_ID'])
+        docTypCd = str(request.data['DOC_TYP_CD'])
+        reqtDttm = str(request.data['REQT_DTTM'])
+
+        logger.info("HttpResponse RECEIVE > CLOFFER_ID-[" + str(clofferId) + "] / DOC_TYP_CD-["+docTypCd+"] / PRC_DTTM-["+reqtDttm+"]")
+
+        # 에러코드 확인 - request를 받을 시 Validation을 통해 정상일 경우만 Spoiler 실행. 정상이 아닐 경우, 바로 Response 보냄
+        errCode = '00'
+
+        # 예외처리
+        if clofferId is None or clofferId == 0:
+            logger.info("WRONG DATA > CLOFFER_ID이 null 오류")
+            errCode = '01'
+            #return Response('WRONG DATA - CLOFFER_ID', status=status.HTTP_400_BAD_REQUEST)
+        if docTypCd is None or docTypCd == '':
+            logger.info("WRONG DATA > DOC_TYP_CD이 null 오류")
+            errCode = '02'
+            #return Response('WRONG DATA - DOC_TYP_CD', status=status.HTTP_400_BAD_REQUEST)
+        if reqtDttm is None or reqtDttm == '' or len(reqtDttm) != 14:
+            logger.info("WRONG DATA > PRC_DTTM이 null 또는 데이터타입이 맞지 않는 오류.")
+            errCode = '03'
+           #return Response('WRONG DATA - PRC_DTTM', status=status.HTTP_400_BAD_REQUEST)
+
+        # 변수가 정확하다면 Spoiler 진행.
+        if errCode == '00':
+            # OCR 진행을 위한 Serializer 생성
+            serializer = OCRSerializer(data=request.data)
+
+            if serializer.is_valid():
+                serializer.save()
+                response = afterResponse(serializer.data)
+                return response
+            else:
+                logger.info("HttpResponse(Post) > BAD REQUEST(400) " + str(request.data))
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            logger.info("WRONG DATA > 정확하지 않은 변수로 OCR처리 진행을 하지 않고 Return")
+            requestREST.requestForBW(clofferId, docTypCd, errCode)
 
 class afterResponse(HttpResponse):
     def close(self):
@@ -20,42 +137,16 @@ class afterResponse(HttpResponse):
             logger.info('HttpResponse - successful(%s)' % self.status_code)
 
             # OCR 진행
-            logger.info('OCR Start - ' + str(clofferId))
-            ocr_tesseract.startOCRProcess(clofferId)
-            logger.info('OCR Exit - ' + str(clofferId))
-
-@api_view(['GET', 'POST'])
-def ocr_list(request):
-
-    if request.method == 'GET':
-        snippets = OCRInstance.objects.all()
-        serializer = OCRSerializer(snippets, many=True)
-        return Response(serializer.data)
-
-    elif request.method == 'POST':
-        global  clofferId
-        clofferId = int(request.data['CLOFFER_ID'])
-        logger.info("HttpResponse - RECEIVE CLOFFER_ID " + str(clofferId))
-
-        if clofferId is None or clofferId == 0:
-            logger.info("WRONG DATA - CLOFFER_ID IS NULL")
-            return Response('WRONG DATA - CLOFFER_ID', status=status.HTTP_400_BAD_REQUEST)
-
-        serializer = OCRSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            response = afterResponse(serializer.data, clofferId)
-            return response
-        else:
-            logger.info("HttpResponse - BAD REQUEST(400) " + str(request.data))
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            logger.info('Spoiler Start - ' + str(clofferId))
+            ocr_tesseract.startSpoilerProcess(clofferId, docTypCd, reqtDttm)
+            logger.info('Spoiler Exit - ' + str(clofferId))
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def ocr_list_detail(request, pk):
+def spoiler_extract_list(request, pk):
     try:
-        snippet = OCRInstance.objects.get(pk=pk)
-    except OCRInstance.DoesNotExist:
+        snippet = SPOILER_LOG.objects.get(pk=pk)
+    except SPOILER_LOG.DoesNotExist:
         logger.info("NOT FOUND(404) - " + str(request.data))
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -76,16 +167,6 @@ def ocr_list_detail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
-"""
-Django REST framework에서는 이러한 View들의 집합인 ViewSet을 사용합니다.
-ViewSet을 사용하면 View를 사용할 때보다는 덜 명확합니다.
-하지만 Router에 ViewSet을 등록하면 자동으로 URL 패턴을 생성해주기 때문에 매우 편리합니다.
-"""
-# class OCRViewSet(viewsets.ModelViewSet):
-#     queryset = OCRInstance.objects.all()
-#     serializer_class = OCRSerializer
-
 """ 
 #    @detail_route 부분을 데코레이터라고 부릅니다.
 #    이 부부은 ViewSet에서 기본적으로 제공하는 Action이외의 메서드를 라우팅할 때 사용합니다.
@@ -96,4 +177,4 @@ ViewSet을 사용하면 View를 사용할 때보다는 덜 명확합니다.
     데코레이터에는 두 가지 종류가 있습니다.
     detail_route → 특정 아이템을 반환하는 메서드일 때 사용합니다.
     list_route → 아이템 목록을 반환할 때 사용합니다.
-   """
+"""

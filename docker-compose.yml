@@ -7,6 +7,8 @@ services:     # docker-compose 에서 컨테이너(service) 단위를 묶음
     volumes: # 컨테이너에 볼륨을 마운트할 때 사용
       - .:/ImageProcessing
       - ./config/nginx:/etc/nginx/conf.d
+      - ./static_root:/static_root
+      - ./media:/media
     depends_on:
       - web
 
@@ -14,9 +16,9 @@ services:     # docker-compose 에서 컨테이너(service) 단위를 묶음
     build: # 빌드 지정
       context: . # Dockerfile이 있는 디렉토리의 경로
       dockerfile : Dockerfile # 빌드할 Docker 파일 위치
-
     # docker-compose up 을 command 창에 입력하면 실행할 명령어 (컨테이너 안에서 작동하는 명령 지정)
-    command: gunicorn wsgi:application --bind 0.0.0.0:8000
+#    command: gunicorn wsgi:application --bind 0.0.0.0:8000
+    command: bash -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate && gunicorn wsgi:application -b 0.0.0.0:8000"
     volumes: # 로컬 폴더(.)와 docker 의 /ImageProcessing 폴더를 마운트(연결)
       - .:/ImageProcessing
     expose: # docker 와 로컬에서 서로 입력 출력할 포트, 접근할 포트
