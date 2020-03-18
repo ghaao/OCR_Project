@@ -111,7 +111,6 @@ def startSpoilerProcess(clofferId, docTypCd, reqtDttm):
         # Fail Requset(REST) 전송
         requestREST.requestForBW(clofferId, docTypCd, errCode)
 
-
 def startSpoilerTest(fullPath):
     fullPath = BASE_DIR + fullPath
     img = Image.open(fullPath)
