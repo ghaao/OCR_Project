@@ -1,8 +1,8 @@
-# OCR_Project
+# OCR_Project(Spoiler)
 spoiler
 spoiler is designed to recognize hospital documents for insurance submission based on tesseract.
 
-Requirements
+# Requirements
 Requires libtesseract (>=4.00) and libleptonica
 
 On Ubuntu 18.04:
