@@ -1,7 +1,9 @@
 # 기본 이미지를 python3.8.1 로 설정
 FROM python:3.8.1
+
 # tesseract-ocr 업데이트 또는 설치하기
-RUN apt-get update && apt-get install -y tesseract-ocr
+#RUN apt-get update && apt-get install -y tesseract-ocr
+RUN apt-get update && apt-get install -y tesseract-ocr libtesseract-dev libleptonica-dev pkg-config tesseract-ocr-kor
 
 # docker 한글 패치를 위한 설정
 RUN apt-get update && apt-get install -y locales

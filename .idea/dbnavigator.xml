@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="608f39d9-af51-4b36-b388-ebab7848b368">
-        <schema name="main" object-types="table, view" />
+        <schema name="main" object-types="view, table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,7 +41,7 @@
     <connection id="608f39d9-af51-4b36-b388-ebab7848b368" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_photo" active-filter-id="" />
+    <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_photo" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="608f39d9-af51-4b36-b388-ebab7848b368" dataset="main.ocr_app_img_file_info" active-filter-id="EMPTY_FILTER">
       <filter id="129929f9-fcb7-4ad6-9262-fa1318cc35d5" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />

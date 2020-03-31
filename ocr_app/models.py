@@ -16,6 +16,7 @@ class SPOILER_LOG(models.Model):
     REQT_DTTM     = models.CharField(max_length=14)
     DOC_TYP_CD    = models.CharField(max_length=2, null=False)
     REQTR_USER_NO = models.CharField(max_length=10, null=False)
+    PRC_TYP_CD    = models.CharField(max_length=2, null=True)
     PRC_DTTM      = models.DateTimeField(null=True)
     PRC_FLG       = models.CharField(max_length=1, default='N')
     MSG_CTNT      = models.TextField(null=True)
@@ -29,3 +30,18 @@ class SPOILER_LOG(models.Model):
     #     self.MSG_CTNT  = 'Receive request - CLOFFER_ID(' + str(self.CLOFFER_ID) + '), RSTR_USER_NO(' + self.RSTR_USER_NO + ')'
     #
     #     super().save(*args, **kwargs)
+
+class DOC_TYP_WORD_LIST(models.Model):
+    DOC_TYP_CD    = models.CharField(max_length=2, null=False)
+    USE_FLG       = models.CharField(max_length=1, default='Y')
+    ITM_STR_VLU01 = models.CharField(max_length=100)
+    ITM_STR_VLU02 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU03 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU04 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU05 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU06 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU07 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU08 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU09 = models.CharField(max_length=100, null=True, blank=True)
+    ITM_STR_VLU10 = models.CharField(max_length=100, null=True, blank=True)
+    REG_DTTM      = models.DateTimeField(auto_now_add=True)

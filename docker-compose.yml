@@ -21,5 +21,5 @@ services:     # docker-compose 에서 컨테이너(service) 단위를 묶음
     command: bash -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate && gunicorn wsgi:application -b 0.0.0.0:8000"
     volumes: # 로컬 폴더(.)와 docker 의 /ImageProcessing 폴더를 마운트(연결)
       - .:/ImageProcessing
-    expose: # docker 와 로컬에서 서로 입력 출력할 포트, 접근할 포트
+    expose: # docker 와 로컬에서 서로 입력 출력할 포트, 접근docker save -o d:\imageprocessing_web.tar imageprocessing_web할 포트
       - "8000"

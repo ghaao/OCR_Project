@@ -28,9 +28,16 @@ class BasicUploadView(View):
         form = PhotoForm(self.request.POST, self.request.FILES)
         if form.is_valid():
             photo = form.save()
-            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
 
-            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+            # 문서유형코드 확인
+            if len(photo.file.name) < 17:
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': '잘못된 파일명입니다. (ex-123456780120200323000000)'}
+            else:
+                #문서유형코드 알아내기
+                docTypCd = photo.file.name[15:17]
+                imagetext = ocr_tesseract.startSpoilerTest(photo.file.url, docTypCd)
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+
         else:
             data = {'is_valid': False}
         return JsonResponse(data)
@@ -44,10 +51,19 @@ class ProgressBarUploadView(View):
 
     def post(self, request):
         form = PhotoForm(self.request.POST, self.request.FILES)
+
         if form.is_valid():
             photo = form.save()
-            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
-            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+
+            # 문서유형코드 확인
+            if len(photo.file.name) < 17:
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': '잘못된 파일명입니다. (ex-123456780120200323000000)'}
+            else:
+                #문서유형코드 알아내기
+                docTypCd = photo.file.name[15:17]
+                imagetext = ocr_tesseract.startSpoilerTest(photo.file.url, docTypCd)
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+
         else:
             data = {'is_valid': False}
 
@@ -63,8 +79,16 @@ class DragAndDropUploadView(View):
         form = PhotoForm(self.request.POST, self.request.FILES)
         if form.is_valid():
             photo = form.save()
-            imagetext = ocr_tesseract.startSpoilerTest(photo.file.url)
-            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+
+            # 문서유형코드 확인
+            if len(photo.file.name) < 17:
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': '잘못된 파일명입니다. (ex-123456780120200323000000)'}
+            else:
+                #문서유형코드 알아내기
+                docTypCd = photo.file.name[15:17]
+                imagetext = ocr_tesseract.startSpoilerTest(photo.file.url, docTypCd)
+                data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url, 'imagetext': imagetext}
+
         else:
             data = {'is_valid': False}
         return JsonResponse(data)
@@ -98,20 +122,21 @@ def spoiler_extract(request):
 
         # 에러코드 확인 - request를 받을 시 Validation을 통해 정상일 경우만 Spoiler 실행. 정상이 아닐 경우, 바로 Response 보냄
         errCode = '00'
+        outText = ''
 
         # 예외처리
         if clofferId is None or clofferId == 0:
-            logger.info("WRONG DATA > CLOFFER_ID이 null 오류")
+            logger.info("WRONG DATA > CLOFFER_ID가 null인 오류")
             errCode = '01'
-            #return Response('WRONG DATA - CLOFFER_ID', status=status.HTTP_400_BAD_REQUEST)
-        if docTypCd is None or docTypCd == '':
+            outText = 'CLOFFER_ID가 null인 오류'
+        elif docTypCd is None or docTypCd == '':
             logger.info("WRONG DATA > DOC_TYP_CD이 null 오류")
             errCode = '02'
-            #return Response('WRONG DATA - DOC_TYP_CD', status=status.HTTP_400_BAD_REQUEST)
-        if reqtDttm is None or reqtDttm == '' or len(reqtDttm) != 14:
+            outText = 'DOC_TYP_CD가 null인 오류'
+        elif reqtDttm is None or reqtDttm == '' or len(reqtDttm) != 14:
             logger.info("WRONG DATA > PRC_DTTM이 null 또는 데이터타입이 맞지 않는 오류.")
             errCode = '03'
-           #return Response('WRONG DATA - PRC_DTTM', status=status.HTTP_400_BAD_REQUEST)
+            outText = 'PRC_DTTM이 null 또는 데이터타입이 맞지 않는 오류.'
 
         # 변수가 정확하다면 Spoiler 진행.
         if errCode == '00':
@@ -120,14 +145,26 @@ def spoiler_extract(request):
 
             if serializer.is_valid():
                 serializer.save()
-                response = afterResponse(serializer.data)
-                return response
+                #response = afterResponse(serializer.data)
+                #return response
+                errCode, outText = ocr_tesseract.startSpoilerProcess(clofferId, docTypCd, reqtDttm)
+                logger.info("HttpResponse RESPONSE > 결과[" + errCode +"] - " + str(outText))
+                return Response({'CLOFFER_ID': clofferId,
+                                'DOC_TYP_CD': docTypCd,
+                                'REQT_DTTM': reqtDttm,
+                                'ERR_CD': errCode,
+                                'RESULT': outText})
             else:
-                logger.info("HttpResponse(Post) > BAD REQUEST(400) " + str(request.data))
+                logger.info("HttpResponse RESPONSE > BAD REQUEST(400) " + str(request.data))
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
-            logger.info("WRONG DATA > 정확하지 않은 변수로 OCR처리 진행을 하지 않고 Return")
-            requestREST.requestForBW(clofferId, docTypCd, errCode)
+            logger.info("HttpResponse RESPONSE > 정확하지 않은 변수로 오류 처리 CLOFFER_ID-[" + str(clofferId) + "] / DOC_TYP_CD-[" + docTypCd + "] / PRC_DTTM-[" + reqtDttm + "]")
+            #requestREST.requestForBW(clofferId, docTypCd, reqtDttm, errCode, outText)
+            return Response({'CLOFFER_ID': clofferId,
+                             'DOC_TYP_CD': docTypCd,
+                             'REQT_DTTM': reqtDttm,
+                             'ERR_CD': errCode,
+                             'RESULT': outText})
 
 class afterResponse(HttpResponse):
     def close(self):
